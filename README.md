@@ -173,11 +173,9 @@ Intense 1v1 boss combat against a powerful Oni warrior. Skill-based gameplay req
 
 ## 🏅 **Education**
 
-**B.Tech in Computer Engineering**
+**B.E in Computer Engineering**
 - **University:** MCT's Rajiv Gandhi Institute of Technology, Mumbai
-- **Duration:** 2021-2025 (Currently enrolled)
-- **CGPA:** 8.2/10
-- **Focus Areas:** Machine Learning, NLP, Computer Vision, XR Development
+- **Duration:** 2021-2025 
 
 ---
 
