@@ -1,0 +1,9 @@
+<svg width="900" height="120" viewBox="0 0 900 120" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="120" fill="#0a1628"/>
+  <text x="450" y="55" font-family="Segoe UI, sans-serif" font-size="16" fill="#8fa3b8" text-anchor="middle">
+    Commit skyline generates after the first Action run
+  </text>
+  <text x="450" y="78" font-family="Segoe UI, sans-serif" font-size="12" fill="#5c6b7a" text-anchor="middle">
+    Actions tab -&gt; refresh-profile.yml -&gt; Run workflow
+  </text>
+</svg>

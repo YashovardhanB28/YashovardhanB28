@@ -1,0 +1,31 @@
+<svg width="900" height="180" viewBox="0 0 900 180" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .bg { fill: #0a1628; }
+      .accent { fill: #14b8a6; }
+      .name { font-family: 'Segoe UI', Helvetica, Arial, sans-serif; font-size: 40px; font-weight: 700; fill: #f4f6f8; }
+      .role { font-family: 'Segoe UI', Helvetica, Arial, sans-serif; font-size: 17px; fill: #8fa3b8; letter-spacing: 1px; }
+      .tick { fill: none; stroke: #14b8a6; stroke-width: 1.5; opacity: 0.55; }
+    </style>
+  </defs>
+
+  <rect class="bg" width="900" height="180" rx="10"/>
+
+  <!-- accent rule -->
+  <rect class="accent" x="0" y="0" width="6" height="180" rx="0"/>
+
+  <!-- subtle grid ticks, evokes genomic/data lines without being decorative noise -->
+  <g class="tick">
+    <line x1="40" y1="140" x2="860" y2="140"/>
+    <line x1="60" y1="130" x2="60" y2="150"/>
+    <line x1="180" y1="130" x2="180" y2="150"/>
+    <line x1="300" y1="120" x2="300" y2="150"/>
+    <line x1="420" y1="135" x2="420" y2="150"/>
+    <line x1="540" y1="115" x2="540" y2="150"/>
+    <line x1="660" y1="128" x2="660" y2="150"/>
+    <line x1="780" y1="132" x2="780" y2="150"/>
+  </g>
+
+  <text x="46" y="80" class="name">Yashovardhan Bangur</text>
+  <text x="46" y="108" class="role">AI GENERALIST · BACKEND ENGINEER · APPLIED ML RESEARCHER</text>
+</svg>

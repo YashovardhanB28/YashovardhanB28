@@ -1,0 +1,56 @@
+name: Refresh Profile Stats
+
+on:
+  schedule:
+    # Every Monday at 06:00 UTC
+    - cron: "0 6 * * 1"
+  workflow_dispatch: {}
+  push:
+    branches: [main]
+    paths:
+      - "scripts/update_stats.py"
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Update stats block
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_USER: YashovardhanB28
+        run: python scripts/update_stats.py
+
+      - name: Regenerate commit skyline
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_USER: YashovardhanB28
+        run: python scripts/generate_skyline.py
+
+      - name: Append changelog entry
+        run: |
+          if ! git diff --quiet README.md assets/skyline.svg; then
+            DATE=$(date -u +%Y-%m-%d)
+            printf "\n## %s\n- Automated stats + skyline refresh\n" "$DATE" >> CHANGELOG.md
+          fi
+
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add README.md CHANGELOG.md assets/skyline.svg
+          git diff --cached --quiet || git commit -m "chore: automated profile stats + skyline refresh"
+          git push

@@ -1,0 +1,17 @@
+name: Idea / feature suggestion
+description: Suggest an addition to the profile repo or its automation
+labels: ["idea"]
+body:
+  - type: textarea
+    id: idea
+    attributes:
+      label: What's the idea?
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why would it help?
+      description: What does it save or communicate that isn't already covered?
+    validations:
+      required: true

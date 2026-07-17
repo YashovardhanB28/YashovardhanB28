@@ -1,0 +1,17 @@
+name: Feedback on research write-up
+description: Point out something worth correcting or clarifying in docs/RESEARCH.md
+labels: ["feedback"]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What section?
+      description: Which project/section in docs/RESEARCH.md
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: Details
+    validations:
+      required: true
